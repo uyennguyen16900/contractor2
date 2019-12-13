@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="row">
+    <div class="col m-4">
+      <h3>{{ pet.title }} <small class="text-muted">Last updated {{ pet.modified|date:"SHORT_DATETIME_FORMAT" }} by <b>{{ pet.owner.username }}</b></small></h3>
+      <a class="btn btn-default" href="{% url 'pet-edit-page' pet.slug %}"></a>
+      <hr>
+      <p>{{ pet.description|linebreaksbr }}</p>
+      <hr>
+      <a href="{% url 'pet-list-page' %}">Back to List</a>
+    </div>
+  </div>
+{% endblock %}
