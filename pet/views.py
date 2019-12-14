@@ -41,7 +41,7 @@ class PetAddView(CreateView):
         form = PetForm(request.POST)
         form.instance.owner = self.request.user
         if form.is_valid():
-            pet = form.save(commit=False)
+            pet = form.save()
             return redirect('pet-details-page', slug=pet.slug)
 
 class PetEditView(UpdateView):

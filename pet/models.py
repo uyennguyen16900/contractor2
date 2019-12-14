@@ -7,14 +7,13 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from datetime import timedelta
 
-
-
 class Pet(models.Model):
     """ Represents a single pet page. """
     name = models.CharField(max_length=settings.PET_PAGE_TITLE_MAX_LENGTH, unique=True,
                              help_text="Name of your pet")
     breed = models.CharField(max_length=settings.PET_PAGE_TITLE_MAX_LENGTH, unique=True,
                              help_text="Breed of your pet")
+    # image = models.ImageField(upload_to='get_image_path')
     owner = models.ForeignKey(User, on_delete=models.PROTECT,
                                help_text="The person that posted this page.")
     slug = models.CharField(max_length=settings.PET_PAGE_TITLE_MAX_LENGTH, blank=True, editable=False,

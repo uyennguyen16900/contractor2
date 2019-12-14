@@ -1,5 +1,10 @@
 <div class="card mb-3">
-  <h5 class="card-header ">{{ pet.name }}</h5>
+  <!-- <img src="{{ pet.image.url }}" class="card-img-top" alt="..."> -->
+  <div class="card-header">
+    <h4>{{ pet.name }}</h4>
+    <h6 style="color:#A9A9A9">{{ pet.breed }}</h6>
+  </div>
+
   <div class="card-body border-dark">
     <p class="card-text text-dark">
       {{ pet.description|truncatewords_html:30 }}
