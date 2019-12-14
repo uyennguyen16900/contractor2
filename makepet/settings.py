@@ -88,7 +88,7 @@ WSGI_APPLICATION = 'makepet.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'wiki.sqlite3'),
+        'NAME': os.path.join(BASE_DIR, 'pet.sqlite3'),
     }
 }
 
