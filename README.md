@@ -1,1 +1,1 @@
-My proposal for my contractor project is to make a website where people can post about their pets.
+My proposal for my contractor project is to help shelter animals get adopted and find a loving home. Users or animal care facilities can create profiles of shelter pets with photos (still working on uploading image) and detailed descriptions. 
